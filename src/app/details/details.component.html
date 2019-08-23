@@ -1,0 +1,25 @@
+<div class='card'>
+        <div class='table-responsive'>
+                <table class='table'>
+                  <thead>
+                   <tr>
+                      <th>ID:</th>
+                      <th>Full Name:</th>
+                     <th>Avathar Url:</th>
+                     <th>following Url:</th>
+                     <th>node_id:</th>
+                     
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor='let Name of user'>  
+                      <td><a [routerLink]="['../details/' + Name.login]">{{ Name.id }}</a></td>
+                      <td>{{ Name.full_name}}</td>
+                      <td>{{ Name.owner.avatar_url }}</td>
+                      <td>{{ Name.owner.following_url }}</td>
+                      <td>{{ Name.owner.node_id }}</td>
+                   </tr>
+                  </tbody>
+                </table>
+              </div>
+      </div>
